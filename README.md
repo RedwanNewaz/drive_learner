@@ -32,6 +32,8 @@ ROSBAG is the most convenient format to deal with driving data.
 ## How to train?
 Training of my models is very easy. There are three main files in the root direcory- main_cnn, main_ae, main_conv_lstm.
 I have tried to reduce the parameters for training as low as possible. Let's take a look an example to train the CNN.
+
+
 **Example: Training CNN**
 ```python
 import argparse
