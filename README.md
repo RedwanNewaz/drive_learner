@@ -1,5 +1,5 @@
 # Ano_drive_detector in Keras
-In my other repository, I have talked about how to generate CAN image and Depth image.
+In my other [repository](https://github.com/RedwanNewaz/rosbag_decoder), I have talked about how to generate CAN image and Depth image.
 The aim of this project is to learn driving behavior.
 I have designed 3 neural networks -CNN, AUTOENCODER, LSTM-CNN to 
 learn driving behavior from human drivers.
