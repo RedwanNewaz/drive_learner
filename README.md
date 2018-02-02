@@ -37,6 +37,7 @@ I have tried to reduce the parameters for training as low as possible. Let's tak
 **Example: Training CNN**
 ```python
 import argparse
+from keras.models import model_from_json
 from model.train_any_model import universal_train
 from dataset.VideoLoader import VideoLoader,VideoBatchLoader,VariableDataset
 from model.CNNLargeImage import *
@@ -47,9 +48,18 @@ args.add_argument('--model', type=str, default='SISO')
 
 param = args.parse_args()
 mimo = param.model is "MIMO"
+
+#Loading dataset
 vs=VideoLoader()
 data=vs.get_data()
 
+# Loading existing model
+model_name = './summary/CNNLargeImg.json'
+with open(model_name, 'r') as f:
+            json_string = json.load(f)
+cnn_model = model_from_json(json_string)
+
+#Training 
 train = universal_train(model=cnn_model, epochs=10, batch_size=32, ngpu=2, exp=param, MIMO=mimo)
 train.train(x_train=data['depth_x_train'],
                   y_train=data['can_x_train'],
