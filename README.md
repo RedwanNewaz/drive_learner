@@ -70,7 +70,7 @@ There are 3 ways to load your training and testing dataset. If your dataset is s
 The model argument takes two type of input- either SISO (single input single output) or MIMO (multiple input multiple output). As I explained earlier, in case of autoencoder it would be MIMO whereas SISO for CNN/LSTM-CNN. Finally, the result of training saved inside the result direcory. I have assigned the options of choosing the folder name and version so that we can easily organize our results.
 
 ## TODO list
-'''
+```
 * New architecture of LSTM-CNN
 * Anomaly detection using LSTM-CNN
-'''
+```
