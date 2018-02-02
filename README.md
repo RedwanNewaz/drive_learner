@@ -68,7 +68,7 @@ train.train(x_train=data['depth_x_train'],
 ```
 There are 3 ways to load your training and testing dataset. If your dataset is small in size, you can use VideoLoader class to load it. For a large dataset, it is highly recommend to use VideoBatchLoader class to avoid resource exhausted error! Finally, the VariableDataset class can cope with the large video files located at different folders.
 
-**Example: data loader and training
+**Example: data loader and training**
 ```pthon
 # For batch training
 vbs=VideoBatchLoader()
