@@ -68,3 +68,9 @@ train.train(x_train=data['depth_x_train'],
 ```
 There are 3 ways to load your training and testing dataset. If your dataset is small in size, you can use VideoLoader class to load it. For a large dataset, it is highly recommend to use VideoBatchLoader class to avoid resource exhausted error! Finally, the VariableDataset class can cope with the large video files located at different folders.
 The model argument takes two type of input- either SISO (single input single output) or MIMO (multiple input multiple output). As I explained earlier, in case of autoencoder it would be MIMO whereas SISO for CNN/LSTM-CNN. Finally, the result of training saved inside the result direcory. I have assigned the options of choosing the folder name and version so that we can easily organize our results.
+
+## TODO list
+'''
+* New architecture of LSTM-CNN
+* Anomaly detection using LSTM-CNN
+'''
