@@ -24,7 +24,7 @@ as a video file format using opencv library.
 ## Dataset is empty!
 Sorry floks! Driving dataset are not included in this repository.
 However, if you have access to LiDAR sensor and CAN bus
-of your autonomous car, we can easily create your own dataset using my rosbag decoder. 
+of your autonomous car, we can easily create your own dataset using my [rosbag decoder](https://github.com/RedwanNewaz/rosbag_decoder). 
 Moreover, don't forget to record your driving data in rosbag file. Since we need to record multi-modality sensor outputs, 
 ROSBAG is the most convenient format to deal with such type of data. 
 
@@ -67,6 +67,24 @@ train.train(x_train=data['depth_x_train'],
                   )
 ```
 There are 3 ways to load your training and testing dataset. If your dataset is small in size, you can use VideoLoader class to load it. For a large dataset, it is highly recommend to use VideoBatchLoader class to avoid resource exhausted error! Finally, the VariableDataset class can cope with the large video files located at different folders.
+
+**Example: data loader and training
+```pthon
+# For batch training
+vbs=VideoBatchLoader()
+train.batch_train(vbs)
+
+# when data are in different folders
+vbs=VideoBatchLoader(batch_size=seq_length)
+foldernames = ["folder_1", "folder_2", "folder_3" ]
+versions = ['60.01', '60.02', '60.03']
+for f, v in zip(foldernames, versions):
+   datasampler = VariableDataset(f)
+   param.vs = v
+   train.seq_train(vbs, batch_size,param)
+
+```
+
 The model argument takes two type of input- either SISO (single input single output) or MIMO (multiple input multiple output). As I explained earlier, in case of autoencoder it would be MIMO whereas SISO for CNN/LSTM-CNN. Finally, the result of training saved inside the result direcory. I have assigned the options of choosing the folder name and version so that we can easily organize our results.
 
 ## TODO list
