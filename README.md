@@ -23,11 +23,10 @@ as a video file format using opencv library.
 
 ## Dataset is empty!
 Sorry floks! Driving dataset are not included in this repository.
-As you know that this type of dataset are very expensive to generate,
-I can't provide you the dataset. However, if you have access to LiDAR sensor and CAN bus
+However, if you have access to LiDAR sensor and CAN bus
 of your autonomous car, we can easily create your own dataset using my rosbag decoder. 
-Moreover, don't forget to record your driving data in rosbag file. Since we need to record multi-modality sensors, 
-ROSBAG is the most convenient format to deal with driving data. 
+Moreover, don't forget to record your driving data in rosbag file. Since we need to record multi-modality sensor outputs, 
+ROSBAG is the most convenient format to deal with such type of data. 
 
 ## How to train?
 Training of my models is very easy. There are three main files in the root direcory- main_cnn, main_ae, main_conv_lstm.
