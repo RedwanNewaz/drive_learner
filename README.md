@@ -3,6 +3,16 @@ In my other repository, I have talked how to generate CAN image and Depth image.
 The aim of this project is to learn driving behavior.
 I have designed 3 neural networks -CNN, AUTOENCODER, LSTM-CNN to 
 learn driving behavior from human drivers.
+
+## CNN Architecture
+<img src="https://github.com/RedwanNewaz/drive_learner/blob/master/model/covnet.png" alt="" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="600" height="300" />
+
+## AutoEncoder Architecture
+<img src="https://github.com/RedwanNewaz/drive_learner/blob/master/model/autoencoder.png" alt="" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="600" height="300" />
+
+## LSTM-CNN Architecture
+<img src="https://github.com/RedwanNewaz/drive_learner/blob/master/model/lstm_cnn.png" alt="" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="600" height="300" />
+
 The input(s) of this network is Depth image or both CAN and depth image. The output
 depends on the type of deep learning algorithm we are using. 
 For instance, the output of CNN is CAN image whereas input is depth image. 
