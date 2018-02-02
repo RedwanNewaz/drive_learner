@@ -1,4 +1,4 @@
-# drive_learner in Keras
+# Ano_drive_detector in Keras
 In my other repository, I have talked how to generate CAN image and Depth image.
 The aim of this project is to learn driving behavior.
 I have designed 3 neural networks -CNN, AUTOENCODER, LSTM-CNN to 
